@@ -14,10 +14,17 @@ body {
     background-color: #040013;
 }
 
+:root{
+    --blue-gradient: linear-gradient(356deg, rgb(36, 36, 36), rgb(7, 4, 58));
+    --blue-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(11, 1, 49, 0.7);
+    --gray-shadow: 6px 6px 10px -1px rgba(255, 255, 255, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
 .content {
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-        -6px -6px 10px -1px rgba(11, 1, 49, 0.7);
-    background: linear-gradient(356deg, rgb(36, 36, 36), rgb(7, 4, 58));
+    box-shadow: var(--blue-shadow);
+    background: var(--blue-gradient);
     height: 650px;
     width: 400px;
     padding: 25px 25px;
@@ -46,8 +53,7 @@ body {
 .music-image {
     width: 230px;
     height: 230px;
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-        -6px -6px 10px -1px rgba(7, 4, 58, 0.7);
+    box-shadow: var(--blue-shadow);
     border-radius: 50%;
     margin-top: 25px;
     padding: 7px;
@@ -134,8 +140,7 @@ body {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    box-shadow: 6px 6px 10px -1px rgba(255, 255, 255, 0.15),
-        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    box-shadow: var(--gray-shadow);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,8 +148,7 @@ body {
 }
 
 .control-btn span:active {
-    box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-        inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    box-shadow: var(--blue-shadow);
 }
 
 .volume-bar {
@@ -172,8 +176,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    box-shadow: 6px 6px 10px -1px rgba(255, 255, 255, 0.15),
-                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    box-shadow: var(--gray-shadow);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,7 +254,7 @@ input[type="range"]:hover::-webkit-slider-thumb {
 }
 
 #track-list-container::-webkit-scrollbar-thumb {
-    background: linear-gradient(356deg, rgb(36, 36, 36), rgb(7, 4, 58));
+    background: var(--blue-gradient);
     border-radius: 100px;
 }
 
